@@ -2,7 +2,6 @@
 /**
  * main - Entry point
  * Description: 'c hello program '
- * @str: describe the parameter
  * Return: Always 0 (Success)
  */
 int main(void)
