@@ -1,24 +1,12 @@
 #include <stdio.h>
 
 
-int main(){
- 
+int main() {
+
           /* initialisation string */
-
-   char str[] = " Programming is like building a multilingual puzzle " ;
-   
+   char str[] = " \"Programming is like building a multilingual puzzle " ;
           /* printing str */
-
-
-
    puts(str);   
+ return (0);
 
-
-
-
-
-
-
-
-return (0);
-}
+ }
