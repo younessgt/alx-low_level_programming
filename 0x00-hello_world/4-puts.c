@@ -1,7 +1,6 @@
 #include <stdio.h>
 /**
  * main - Entry point
- * Description: 'c hello program '
  * Return: Always 0 (Success)
  */
 int main(void)
