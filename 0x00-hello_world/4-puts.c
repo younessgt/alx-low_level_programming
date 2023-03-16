@@ -1,16 +1,16 @@
 #include <stdio.h>
 /**
-*fonction main 
-*/ 
+ * fonction main 
+ */ 
 int main(void)
 {
 /**
-* initialisation string
-*/
+ * initialisation string
+ */
 char str[] = "\"Programming is like building a multilingual puzzle";
 /*
-* printing str
-*/
+ * printing str
+ */
 puts(str);   
 return (0);
 }
