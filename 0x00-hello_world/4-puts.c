@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- * fonction main
+ * fonction main - Entry point
  */
 int main(void)
 {
