@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- *fonction main 
+ * fonction main
  */ 
 int main(void)
 {
@@ -9,8 +9,8 @@ int main(void)
  */
 char str[] = "\"Programming is like building a multilingual puzzle";
 /**
- *printing str
+ * printing str
  */
- puts(str);   
+puts(str);   
 return (0);
 }
