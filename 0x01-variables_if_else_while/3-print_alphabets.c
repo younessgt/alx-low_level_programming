@@ -17,7 +17,7 @@ int main(void)
 			break;
 		}
 		else
-			putchar(alpha[i]);       
+			putchar(alpha[i]);
 	}
 return (0);
 }
