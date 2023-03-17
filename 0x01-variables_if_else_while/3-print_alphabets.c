@@ -1,7 +1,7 @@
 #include <stdio.h>
 /**
- * main - Entry point 
- * Return: 0 
+ * main - Entry point
+ * Return: 0
  */
 int main(void)
 {
@@ -9,7 +9,7 @@ int main(void)
 	int num = 55;
 	char alpha[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
-	for (i =0; i < num; i++)
+	for (i = 0; i < num; i++)
 	{
 		if (alpha[i] == '\0')
 		{
@@ -17,8 +17,7 @@ int main(void)
 			break;
 		}
 		else
-			putchar(alpha[i]);
-                        
+			putchar(alpha[i]);       
 	}
 return (0);
 }
