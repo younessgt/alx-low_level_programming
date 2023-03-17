@@ -9,6 +9,13 @@ int main(void)
 	int n = 10;
 
 	for (i = 0; i < n; i++)
-		printf("%d", i);
+	{
+		if (i == 9)
+		{
+			printf("%d\n", i);
+		}
+		else
+			printf("%d", i);
+	}
 return (0);
 }
