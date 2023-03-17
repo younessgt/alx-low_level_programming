@@ -3,7 +3,7 @@
  * main - Entry point
  * Return: 0
  */
-int main (void)
+int main(void)
 {
 	int i;
 	int num = 30;
@@ -15,11 +15,9 @@ int main (void)
 		{
 			putchar('\n');
 			break;
-		
 		}
 		if (alpha[i] != 'q' && alpha[i] != 'e')
 			putchar(alpha[i]);
-	
 	}
 return (0);
 }
