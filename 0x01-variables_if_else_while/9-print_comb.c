@@ -6,19 +6,17 @@
 int main(void)
 {
         int i;
-        int N = 10;
-        int Str[] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+        int N = 9;
 
-        for (i = 0; i < N; i++)
+        for (i = 0; i <= N; i++)
         {
-                if (Str[i] < 9)
-                {
-			putchar(Str[i] + '0');
-			putchar(',');
-			putchar(' ');
+		putchar(i%10 + '0');
+		if (i == N)
+			continue;
+		putchar(',');
+		putchar(' ');
 		}
-		if (Str[i] == 9)
-			putchar(Str[i] + '0');
+	putchar('\n');
 	}
 return (0);
 }
