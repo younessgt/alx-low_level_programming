@@ -18,26 +18,22 @@ int main(void)
 			{
 				for (d = 0; d <= 9; d++)
 				{
+					if (a == 0 && b == 0 && c == 0 && d == 0)
+						continue;
 					putchar(a + '0');
 					putchar(b + '0');
 					putchar(' ');
 					putchar(c + '0');
 					putchar(d + '0');
-
+					
 					if (a != 9 || b != 8 || c != 9 || d != 9)
 					{
 						putchar(',');
 						putchar(' ');
-					
 					}
-				
 				}
-			
 			}
-		
-		
 		}
-	
 	}
 putchar('\n');
 return (0);
