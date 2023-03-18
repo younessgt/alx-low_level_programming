@@ -20,6 +20,10 @@ int main(void)
 				{
 					if (a == 0 && b == 0 && c == 0 && d == 0)
 						continue;
+					if (a == 0 && b == 1 && c == 0 && d == 0)
+						continue;
+					if (a == 0 && b == 1 && c == 0 && d == 1)
+						continue;
 					putchar(a + '0');
 					putchar(b + '0');
 					putchar(' ');
