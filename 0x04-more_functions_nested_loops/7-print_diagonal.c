@@ -9,9 +9,9 @@ void print_diagonal(int n)
 	int i;
 	int j;
 
-	for (i = 1; i <= n; i++)
+	if (n > 0)
 	{
-		if (n > 0)
+		for (i = 1; i <= n; i++)
 		{
 			for (j = 1; j <= i; j++)
 			{
@@ -20,9 +20,10 @@ void print_diagonal(int n)
 				else
 					_putchar(' ');
 			}
-		}
-		else
 			_putchar('\n');
-		_putchar('\n');
+		}
 	}
+	else
+		_putchar('\n');
+	_putchar('\n');
 }
