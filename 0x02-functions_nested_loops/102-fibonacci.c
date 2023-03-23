@@ -5,9 +5,9 @@
  */
 int main(void)
 {
-	long i;
+	int i;
 	long j = 1;
-	int k = 0;
+	long k = 0;
 	long s;
 
 	for (i = 0; i < 50; i++)
