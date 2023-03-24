@@ -43,4 +43,6 @@ void print_number(int n)
 		_putchar(t + '0');
 		_putchar(m + '0');
 	}
+	else if (n == 0)
+		_putchar(n + '0');
 }
