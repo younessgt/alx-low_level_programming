@@ -5,10 +5,10 @@
  */
 int main(void)
 {
-	int i = 0;
-	int j = 1;
-	int sum1;
-	int sum2;
+	long i = 0;
+	long j = 1;
+	long sum1 = 1;
+	long sum2 = 0;
 
 	while (sum1 < 4000000)
 	{
@@ -18,6 +18,6 @@ int main(void)
 		if (sum1 % 2 == 0)
 			sum2 = sum2 + sum1;
 	}
-	printf("%d\n", sum2);
+	printf("%li\n", sum2);
 return (0);
 }
