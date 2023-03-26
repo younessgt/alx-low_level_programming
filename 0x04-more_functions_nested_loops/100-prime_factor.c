@@ -5,8 +5,8 @@
  */
 int main(void)
 {
-	long long i;
-	long long n = 612852475143;
+	long i;
+	long n = 612852475143;
 
 	for (i = 2; n > 1; i++)
 	{
@@ -14,6 +14,6 @@ int main(void)
 			n = n / i;
 	}
 	i--;
-	printf("%llu\n", i);
+	printf("%ld\n", i);
 return (0);
 }
