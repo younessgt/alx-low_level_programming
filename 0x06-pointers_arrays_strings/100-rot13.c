@@ -18,7 +18,7 @@ char *leet(char *str)
 			if (str[i] == AL[j])
 			{
 				str[i] = NB[j];
-				bresk;
+				break;
 			}
 	}
 	return (str);
