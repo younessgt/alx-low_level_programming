@@ -4,7 +4,7 @@
  * @str: pointer to character
  * Return: str
  */
-char *leet(char *str)
+char *rot13(char *str)
 {
 	int i;
 	int j;
