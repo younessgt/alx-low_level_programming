@@ -19,6 +19,8 @@ int _atoi(char *s)
 		{
 			digit = (digit * 10) + (s[i] - 48);
 		}
+		else if (digit > 0)
+			break;
 		i++;
 
 	}
