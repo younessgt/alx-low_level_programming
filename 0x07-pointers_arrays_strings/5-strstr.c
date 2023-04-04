@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdlib.h>
 /**
  * _strstr - Write a function that locates a substring.
  * @haystack: first pointer to character
