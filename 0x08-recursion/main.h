@@ -9,5 +9,6 @@ int _sqrt_recursion(int n);
 int _sqrt_recursion2(int n, int x);
 int is_prime_number(int n);
 int is_prime_number2(int n, int i);
+void _print_rev_recursion(char *s);
 
 #endif
