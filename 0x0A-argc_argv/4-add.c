@@ -11,9 +11,9 @@ int main(int argc, char *argv[])
 	int i;
 	int sum;
 
-	if (argc == 1)
+	if (argc <= 2)
 		printf("0\n");
-	else if (argc > 1)
+	else if (argc > 2)
 	{
 		sum = 0;
 		for (i = 1; i < argc; i++)
