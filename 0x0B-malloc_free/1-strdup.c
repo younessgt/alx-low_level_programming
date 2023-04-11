@@ -1,5 +1,4 @@
 #include <stdlib.h>
-#include "main.h"
 /**
  * _strdup -  function returns a pointer to a new string
  * @str: pointer to character
@@ -7,12 +6,15 @@
  */
 char *_strdup(char *str)
 {
-	int j;
-	int size = _strlen(str);
-	char *p = (char *)malloc(size);
+	int j, size, i = 0;
+	char *p;
 
 	if (str == NULL)
 		return (NULL);
+	while (str[i] != '\0')
+		i++;
+	size = i;
+	p = (char *)malloc(size);
 	if (p == 0)
 		return (NULL);
 	for (j = 0; str[j] != '\0'; j++)
