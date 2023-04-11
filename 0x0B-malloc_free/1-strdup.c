@@ -6,15 +6,14 @@
  */
 char *_strdup(char *str)
 {
-	int j, size, i = 0;
+	int j, i = 0;
 	char *p;
 
 	if (str == NULL)
 		return (NULL);
 	while (str[i] != '\0')
 		i++;
-	size = i;
-	p = (char *)malloc(size);
+	p = (char *)malloc(i + 1);
 	if (p == 0)
 		return (NULL);
 	for (j = 0; str[j] != '\0'; j++)
