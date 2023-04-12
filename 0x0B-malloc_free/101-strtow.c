@@ -30,6 +30,8 @@ char **strtow(char *str)
 		if (str[i] != ' ' && (str[i + 1] == ' ' || str[i + 1] == '\0'))
 			l++;
 	}
+	if (l == 0)
+		return (NULL);
 	p = (char **)malloc(sizeof(char *) * (l + 1));
 	if (p == NULL)
 		return (NULL);
