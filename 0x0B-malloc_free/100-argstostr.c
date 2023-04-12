@@ -19,7 +19,7 @@ char *argstostr(int ac, char **av)
 			k++;
 		k++;
 	}
-	p = (char *)malloc(k * sizeof(char));
+	p = (char *)malloc((k + 1) * sizeof(char));
 	if (p == NULL)
 		return (NULL);
 	k = 0;
