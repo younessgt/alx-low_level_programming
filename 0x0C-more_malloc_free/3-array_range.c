@@ -29,12 +29,13 @@ int *array_range(int min, int max)
 			p[i] = min + i;
 		}
 	}
-	else if (min > 0)
+	else
 	{
-		for (i = 0; i < max; i++)
+		for (i = 0; i < max - min; i++)
 		{
 			p[i] = min + i;
 		}
 	}
+	p[i] = max;
 return (p);
 }
