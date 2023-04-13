@@ -30,9 +30,9 @@ int *array_range(int min, int max)
 			p[i] = min + i;
 		}
 	}
-	else
+	if (min > 0)
 	{
-		for (i = 0; i < max - min + 1; i++)
+		for (i = 0; i < max; i++)
 		{
 			p[i] = min + i;
 		}
