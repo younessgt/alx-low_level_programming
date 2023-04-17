@@ -2,7 +2,7 @@
 /**
  * main - entry point , printing the name of the file
  * using predefined macros
- * return: 0 (success)
+ * Return: 0 (success)
  */
 int main(void)
 {
