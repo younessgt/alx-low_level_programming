@@ -40,8 +40,6 @@ void print_all(const char * const format, ...)
 					|| format[i + 1] == 'f' || format[i + 1] == 's'))
 			printf(", ");
 		i++;
-
-	}
-	printf("\n");
-	va_end(args);
+		printf("\n");
+		va_end(args);
 }
