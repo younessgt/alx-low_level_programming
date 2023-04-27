@@ -6,9 +6,12 @@
  */
 size_t print_list(const list_t *h)
 {
-	unsigned int i = 0;
+	size_t i = 0;
 
-	if (h->str == NULL && h->next == NULL)
+	if (h == NULL)
+		return (0);
+
+	else if (h->str == NULL && h->next == NULL)
 	{
 		printf("[0] (nil)\n");
 		i++;
