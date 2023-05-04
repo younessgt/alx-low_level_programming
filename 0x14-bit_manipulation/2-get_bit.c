@@ -12,10 +12,6 @@ int get_bit(unsigned long int n, unsigned int index)
 	unsigned int count = 0;
 
 	n1 = n;
-	if (n == 0)
-	{
-		return (0);
-	}
 	while (n1)
 	{
 		n1 = n1 >> 1;
@@ -23,12 +19,14 @@ int get_bit(unsigned long int n, unsigned int index)
 	}
 	if (index > count)
 		return (-1);
-	if ((n >> index) & 1)
+	if (index <= count)
 	{
-		return (1);
+		if (n == 0)
+			return (0);
+		if ((n >> index) & 1)
+			return (1);
+		else
+			return (0);
 	}
-	else
-	{
-		return (0);
-	}
+	return (0);
 }
