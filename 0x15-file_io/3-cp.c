@@ -1,5 +1,33 @@
 #include "main.h"
 /**
+ * close_file - function that print an error when the file fail to close
+ * @f: value of the file descriptor
+ * Return: nothing
+ */
+void close_file(int f)
+{
+	dprintf(2, "Error: Can't close fd %d\n", f);
+	exit(100);
+}
+/**
+ * file_err - function that print error
+ * @file: name file
+ * @i: error value
+ * Return: nothing
+ */
+void file_err(char *file, int i)
+{
+	switch (i)
+	{
+		case 98:
+			dprintf(2, "Error: Can't read from file %s\n", file);
+			exit(98);
+		case 99:
+			dprintf(2, "Error: Can't write to %s\n", file);
+			exit(99);
+	}
+}
+/**
  * main - entry point : coping the content of file to another file
  * @argc: number of argument
  * @argv: argument vector
@@ -38,32 +66,4 @@ int main(int argc, char **argv)
 	close(fo1);
 	close(fo2);
 	return (0);
-}
-/**
- * close_file - function that print an error when the file fail to close
- * @f: value of the file descriptor
- * Return: nothing
- */
-void close_file(int f)
-{
-	dprintf(2, "Error: Can't close fd %d\n", f);
-	exit(100);
-}
-/**
- * file_err - function that print error
- * @file: name file
- * @i: error value
- * Return: nothing
- */
-void file_err(char *file, int i)
-{
-	switch (i)
-	{
-		case 98:
-			dprintf(2, "Error: Can't read from file %s\n", file);
-			exit(98);
-		case 99:
-			dprintf(2, "Error: Can't write to %s\n", file);
-			exit(99);
-	}
 }
