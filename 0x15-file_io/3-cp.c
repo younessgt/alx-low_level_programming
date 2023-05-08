@@ -19,41 +19,51 @@ int main(int argc, char **argv)
 	}
 	fo1 = open(argv[1], O_RDONLY);
 	if (fo1 == -1)
-	{
-		dprintf(2, "Error: Can't read from file %s\n", argv[1]);
-		exit(98);
-	}
+		file_err(argv[1], 98);
 	fo2 = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, UGO);
 	if (fo2 == -1)
-	{
-		dprintf(2, "Error: Can't write to %s\n", argv[2]);
-		exit(99);
-	}
+		file_err(argv[2], 99);
 	while ((fr = read(fo1, stock, 1024)) != 0)
 	{
 		if (fr == -1)
-		{
-			dprintf(2, "Error: Can't read from file %s\n", argv[1]);
-			exit(98);
-		}
+			file_err(argv[1], 98);
 		fw = write(fo2, stock, fr);
 		if (fw == -1)
-		{
-			dprintf(2, "Error: Can't write to %s\n", argv[2]);
-			exit(99);
-		}
+			file_err(argv[2], 99);
 	}
 	if (close(fo1) == -1)
-	{
-		dprintf(2, "Error: Can't close fd %d\n", fo1);
-		exit(100);
-	}
+		close_file(fo1);
 	if (close(fo2) == -1)
-	{
-		dprintf(2, "Error: Can't close fd %d\n", fo2);
-		exit(100);
-	}
+		close_file(fo2);
 	close(fo1);
 	close(fo2);
 	return (0);
+}
+/**
+ * close_file - function that print an error when the file fail to close
+ * @f: value of the file descriptor
+ * Return: nothing
+ */
+void close_file(int f)
+{
+	dprintf(2, "Error: Can't close fd %d\n", f);
+	exit(100);
+}
+/**
+ * file_err - function that print error
+ * @file: name file
+ * @i: error value
+ * Return: nothing
+ */
+void file_err(char *file, int i)
+{
+	switch (i)
+	{
+		case 98:
+			dprintf(2, "Error: Can't read from file %s\n", file);
+			exit(98);
+		case 99:
+			dprintf(2, "Error: Can't write to %s\n", file);
+			exit(99);
+	}
 }
