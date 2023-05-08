@@ -29,7 +29,7 @@ int main(int argc, char **argv)
 		dprintf(2, "Error: Can't write to %s\n", argv[2]);
 		exit(99);
 	}
-	while ((fr = read(fo1, stock, 1024)) > 0)
+	while ((fr = read(fo1, stock, 1024)) != 0)
 	{
 		if (fr == -1)
 		{
