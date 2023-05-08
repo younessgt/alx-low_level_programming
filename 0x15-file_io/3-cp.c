@@ -61,9 +61,9 @@ int main(int argc, char **argv)
 	}
 	if (close(fo1) == -1)
 		close_file(fo1);
+	close(fo1);
 	if (close(fo2) == -1)
 		close_file(fo2);
-	close(fo1);
 	close(fo2);
 	return (0);
 }
