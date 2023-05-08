@@ -38,7 +38,7 @@ int main(int argc, char **argv)
 	int fo1, fo2;
 	ssize_t fr, fw;
 	char stock[1024];
-	mode_t UGO = S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH;
+/*	mode_t UGO = (S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH);*/
 
 	if (argc != 3)
 	{
@@ -48,7 +48,7 @@ int main(int argc, char **argv)
 	fo1 = open(argv[1], O_RDONLY);
 	if (fo1 == -1)
 		file_err(argv[1], 98);
-	fo2 = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, UGO);
+	fo2 = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 	if (fo2 == -1)
 		file_err(argv[2], 99);
 	while ((fr = read(fo1, stock, 1024)) != 0)
