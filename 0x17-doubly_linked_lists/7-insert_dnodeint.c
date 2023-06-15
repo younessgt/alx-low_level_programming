@@ -13,6 +13,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	dlistint_t *tracker = *h;
 	dlistint_t *new_n;
 
+
 	if (idx == 0)
 		return (add_dnodeint(h, n));
 	tracker = tracker->next;
@@ -20,6 +21,8 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	{
 		if (idx == i)
 		{
+			if (tracker->next == NULL)
+				return (add_dnodeint_end(h, n));
 			new_n = malloc(sizeof(dlistint_t));
 			if (new_n == NULL)
 				return (NULL);
