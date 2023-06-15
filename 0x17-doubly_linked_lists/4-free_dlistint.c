@@ -8,11 +8,10 @@ void free_dlistint(dlistint_t *head)
 {
 	dlistint_t *tracker;
 
-	tracker = head;
-	while (tracker->next != NULL)
+	while (head != NULL)
 	{
-		tracker = tracker->next;
-		free(tracker->prev);
+		tracker = head;
+		head = head->next;
+		free(tracker);
 	}
-	free(tracker);
 }
