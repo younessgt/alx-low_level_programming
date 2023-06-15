@@ -33,9 +33,8 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		i++;
 		tracker = tracker->next;
 	}
-	if (idx == i + 1)
+	if (idx == i)
 	{
-		free(new_n);
 		return (add_dnodeint_end(h, n));
 	}
 	free(new_n);
