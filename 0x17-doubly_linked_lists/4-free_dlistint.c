@@ -9,7 +9,7 @@ void free_dlistint(dlistint_t *head)
 	dlistint_t *tracker;
 
 	tracker = head;
-	while (tracker->next!= NULL)
+	while (tracker->next != NULL)
 	{
 		tracker = tracker->next;
 		free(tracker->prev);
