@@ -11,10 +11,8 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
 	unsigned int i = 1;
 	dlistint_t *tracker = *h;
-	dlistint_t *new_n;
+	dlistint_t *new_n = NULL;
 
-	if (h == NULL)
-		return (NULL);
 	if (idx == 0)
 		return (add_dnodeint(h, n));
 	tracker = tracker->next;
@@ -35,7 +33,10 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		i++;
 		tracker = tracker->next;
 	}
-	if (idx == i + 1)
+	if (idx == i + 1){
+		free(new_n);
 		return (add_dnodeint_end(h, n));
+	}
+	free(new_n);
 	return (NULL);
 }
