@@ -21,7 +21,12 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		return (0);
 	new_node->key = strdup(key);
 	new_node->value = strdup(value);
-	if (table->array[index] == NULL)
+	if (new_node->key == NULL || new_node->value == NULL)
+	{
+		free(new_node);
+		return (0)
+	}
+	if (table->array[index] == 0)
 		new_node->next = NULL;
 	else
 		new_node->next = table->array[index];
