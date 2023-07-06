@@ -16,12 +16,11 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 		return (NULL);
 	index = key_index((const unsigned char *)key, table->size);
 	head = table->array[index];
-	while(head != NULL)
+	while (head != NULL)
 	{
 		if (strcmp(key, head->key) == 0)
 			return (head->value);
-		else
-			head = head->next;
+		head = head->next;
 	}
 	return (NULL);
 }
