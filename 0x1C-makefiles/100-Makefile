@@ -4,7 +4,7 @@ OBJ = $(SRC:.c=.o)
 NAME = school
 CFLAGS = -Wall -Werror -Wextra -pedantic
 # Rm is by default rm -f in linux
-ifeq ($(wildcard m.h), "m.h")
+ifeq ($(wildcard m.h), m.h)
 
 .PHONY: all
 all: $(OBJ)
