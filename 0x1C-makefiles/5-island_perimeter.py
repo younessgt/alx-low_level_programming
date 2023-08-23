@@ -1,0 +1,31 @@
+#!/usr/bin/python3
+""" This module contain a function called island_perimeter """
+
+
+def island_perimeter(grid):
+    """ function that returns the perimeter of an insland described
+    by a grid wich is a list of list of integers"""
+
+    count = 1
+    sq = 4
+    summ = 0
+    if isinstance(grid, list):
+        for j in range(len(grid)):
+            if isinstance(grid[j], list):
+                length = len(grid)
+                width = len(grid[j])
+                if length < 100 and width < 100:
+                    for i in range(len(grid[j])):
+                        if isinstance(grid[j][i], int) and (
+                                (grid[j][i] == 0) or
+                                (grid[j][i] == 1)
+                                ):
+                            if width < 100:
+                                if grid[j][i] == 1:
+                                    if count == 1:
+                                        summ = sq
+                                        count += 1
+                                    else:
+                                        summ = (summ - 1) + (sq - 1)
+                                        count += 1
+        return summ
