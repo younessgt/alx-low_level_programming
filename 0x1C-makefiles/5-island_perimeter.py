@@ -6,9 +6,7 @@ def island_perimeter(grid):
     """ function that returns the perimeter of an insland described
     by a grid wich is a list of list of integers"""
 
-    count = 1
-    sq = 4
-    summ = 0
+    sum_perimeter = 0
     if isinstance(grid, list):
         for j in range(len(grid)):
             if isinstance(grid[j], list):
@@ -22,10 +20,11 @@ def island_perimeter(grid):
                                 ):
                             if width < 100:
                                 if grid[j][i] == 1:
-                                    if count == 1:
-                                        summ = sq
-                                        count += 1
-                                    else:
-                                        summ = (summ - 1) + (sq - 1)
-                                        count += 1
-        return summ
+                                    sum_perimeter += 4
+                                    # checking top
+                                    if grid[j - 1][i] == 1 and j != 0:
+                                        sum_perimeter -= 2
+                                    # checking left
+                                    if grid[j][i - 1] == 1 and i != 0:
+                                        sum_perimeter -= 2
+        return sum_perimeter
