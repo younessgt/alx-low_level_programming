@@ -3,11 +3,14 @@ SRC = main.c school.c
 OBJ = $(SRC:.c=.o)
 NAME = school
 CFLAGS = -Wall -Werror -Wextra -pedantic
+# Rm is by default rm -f in linux
 ifeq ($(wildcard m.h), "m.h")
 
+.PHONY all
 all: $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
 
+.PHONY clean oclean fclean
 clean:
 	$(RM) -f *~ $(NAME)
 
@@ -16,6 +19,7 @@ oclean:
 
 fclean: clean oclean
 
+.PHONY re
 re: oclean all
 
 endif
