@@ -48,7 +48,7 @@ int binary_search_2(int *array, size_t left, size_t right, int value)
  * Return: min of x and y
  */
 
-int min(int x, int y)
+int min(size_t x, size_t y)
 {
 	if (x > y)
 		return (y);
