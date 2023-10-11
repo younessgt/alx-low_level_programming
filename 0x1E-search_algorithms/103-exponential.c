@@ -69,7 +69,7 @@ int exponential_search(int *array, size_t size, int value)
 {
 	size_t i;
 
-	if (array == NULL)
+	if (array == NULL || size == 0)
 		return (-1);
 
 	if (array[0] == value)
